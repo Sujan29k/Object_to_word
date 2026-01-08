@@ -8,9 +8,135 @@
   },
   {
     "id": 2,
-    "objects": ["sun", "flower"],
-    "answer": "sunflower",
-    "hint": "A plant",
-    "letters": ["S","U","N","F","L","O","W","E","R"]
+    "objects": ["sun", "day"],
+    "answer": "sunday",
+    "hint": "A day of the week",
+    "letters": ["S", "U", "N", "D", "A", "Y"]
+  },
+  {
+    "id": 3,
+    "objects": ["cat", "fish"],
+    "answer": "catfish",
+    "hint": "An animal",
+    "letters": ["C", "A", "T", "F", "I", "S", "H"]
+  },
+  {
+    "id": 4,
+    "objects": ["car", "rot"],
+    "answer": "carrot",
+    "hint": "A vegetable",
+    "letters": ["C", "A", "R", "R", "O", "T"]
+  },
+  {
+    "id": 5,
+    "objects": ["bee", "leaf"],
+    "answer": "belief",
+    "hint": "Something you trust",
+    "letters": ["B", "E", "L", "I", "E", "F"]
+  },
+  {
+    "id": 6,
+    "objects": ["cow", "bell"],
+    "answer": "cowbell",
+    "hint": "An animal accessory",
+    "letters": ["C", "O", "W", "B", "E", "L", "L"]
+  },
+  {
+    "id": 7,
+    "objects": ["elephant", "tooth"],
+    "answer": "elephanttooth",
+    "hint": "A body part of a large animal",
+    "letters": ["E","L","E","P","H","A","N","T","T","O","O","T","H"]
+  },
+  {
+    "id": 8,
+    "objects": ["bird", "house"],
+    "answer": "birdhouse",
+    "hint": "A home for birds",
+    "letters": ["B","I","R","D","H","O","U","S","E"]
+  },
+  {
+    "id": 9,
+    "objects": ["fish", "bowl"],
+    "answer": "fishbowl",
+    "hint": "A container for fish",
+    "letters": ["F","I","S","H","B","O","W","L"]
+  },
+  {
+    "id": 10,
+    "objects": ["cup", "cake"],
+    "answer": "cupcake",
+    "hint": "A sweet dessert",
+    "letters": ["C","U","P","C","A","K","E"]
+  },
+  {
+    "id": 11,
+    "objects": ["rain", "bow"],
+    "answer": "rainbow",
+    "hint": "Seen after rain",
+    "letters": ["R","A","I","N","B","O","W"]
+  },
+  {
+    "id": 12,
+    "objects": ["moon", "light"],
+    "answer": "moonlight",
+    "hint": "Light at night",
+    "letters": ["M","O","O","N","L","I","G","H","T"]
+  },
+  {
+    "id": 13,
+    "objects": ["turtle", "time"],
+    "answer": "turtletime",
+    "hint": "Slow and steady moment",
+    "letters": ["T","U","R","T","L","E","T","I","M","E"]
+  },
+  {
+    "id": 14,
+    "objects": ["dog", "house"],
+    "answer": "doghouse",
+    "hint": "A home for dogs",
+    "letters": ["D","O","G","H","O","U","S","E"]
+  },
+  {
+    "id": 15,
+    "objects": ["apple", "pie"],
+    "answer": "applepie",
+    "hint": "A famous dessert",
+    "letters": ["A","P","P","L","E","P","I","E"]
+  },
+  {
+    "id": 16,
+    "objects": ["fire", "place"],
+    "answer": "fireplace",
+    "hint": "Keeps you warm",
+    "letters": ["F","I","R","E","P","L","A","C","E"]
+  },
+  {
+    "id": 17,
+    "objects": ["bee", "hive"],
+    "answer": "beehive",
+    "hint": "Home of bees",
+    "letters": ["B","E","E","H","I","V","E"]
+  },
+  {
+    "id": 18,
+    "objects": ["ice", "cream"],
+    "answer": "icecream",
+    "hint": "A cold dessert",
+    "letters": ["I","C","E","C","R","E","A","M"]
+  },
+  {
+    "id": 19,
+    "objects": ["bird", "song"],
+    "answer": "birdsong",
+    "hint": "A natural sound",
+    "letters": ["B","I","R","D","S","O","N","G"]
+  },
+  {
+    "id": 20,
+    "objects": ["wind", "mill"],
+    "answer": "windmill",
+    "hint": "Uses wind energy",
+    "letters": ["W","I","N","D","M","I","L","L"]
   }
 ]
