@@ -113,7 +113,7 @@ class GameScreen extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: level.objects.map((obj) {
                     return Container(
-                      padding: const EdgeInsets.all(12),
+                      padding: const EdgeInsets.all(8),
                       decoration: BoxDecoration(
                         color: Colors.white,
                         borderRadius: BorderRadius.circular(12),
@@ -125,10 +125,21 @@ class GameScreen extends StatelessWidget {
                           ),
                         ],
                       ),
-                      child: Icon(
-                        Icons.image_outlined,
-                        size: 60,
-                        color: theme.colorScheme.primary.withOpacity(0.5),
+                      child: ClipRRect(
+                        borderRadius: BorderRadius.circular(8),
+                        child: Image.asset(
+                          'assets/images/objects/$obj.png',
+                          width: 80,
+                          height: 80,
+                          fit: BoxFit.cover,
+                          errorBuilder: (context, error, stackTrace) {
+                            return Icon(
+                              Icons.image_not_supported_outlined,
+                              size: 80,
+                              color: theme.colorScheme.error.withOpacity(0.5),
+                            );
+                          },
+                        ),
                       ),
                     );
                   }).toList(),
@@ -180,7 +191,7 @@ class GameScreen extends StatelessWidget {
                 spacing: 12,
                 runSpacing: 12,
                 alignment: WrapAlignment.center,
-                children: List.generate(level.letters.length, (index) {
+                children: List.generate(level.shuffledLetters.length, (index) {
                   final isSelected = game.selectedLetters[index];
                   return GestureDetector(
                     onTap: () => game.toggleLetter(index),
@@ -213,7 +224,7 @@ class GameScreen extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          level.letters[index],
+                          level.shuffledLetters[index],
                           style: theme.textTheme.headlineSmall?.copyWith(
                             fontWeight: FontWeight.bold,
                             color: isSelected

@@ -38,7 +38,8 @@ class GameProvider extends ChangeNotifier {
   void _initializeSelectedLetters() {
     final level = currentLevel;
     if (level != null) {
-      _selectedLetters = List.filled(level.letters.length, false);
+      level.shuffleLetters();
+      _selectedLetters = List.filled(level.shuffledLetters.length, false);
     }
   }
 
@@ -54,7 +55,7 @@ class GameProvider extends ChangeNotifier {
     } else {
       // Select: add this letter to answer
       _selectedLetters[index] = true;
-      _userAnswer += level.letters[index];
+      _userAnswer += level.shuffledLetters[index];
     }
     notifyListeners();
   }
@@ -66,7 +67,7 @@ class GameProvider extends ChangeNotifier {
     _userAnswer = '';
     for (int i = 0; i < _selectedLetters.length; i++) {
       if (_selectedLetters[i]) {
-        _userAnswer += level.letters[i];
+        _userAnswer += level.shuffledLetters[i];
       }
     }
   }
