@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../models/level_model.dart';
 import '../core/utils/level_loader.dart';
+import '../services/audio_service.dart';
 
 class GameProvider extends ChangeNotifier {
   // ---------------- STATE ----------------
@@ -9,6 +10,7 @@ class GameProvider extends ChangeNotifier {
   String _userAnswer = '';
   bool _isLoading = true;
   List<bool> _selectedLetters = []; // Track which letters are selected
+  final AudioService _audioService = AudioService();
 
   // ---------------- GETTERS ----------------
   bool get isLoading => _isLoading;
@@ -48,6 +50,8 @@ class GameProvider extends ChangeNotifier {
     final level = currentLevel;
     if (level == null) return;
 
+    _audioService.playTap();
+
     if (_selectedLetters[index]) {
       // Deselect: remove this letter from answer
       _selectedLetters[index] = false;
@@ -82,7 +86,15 @@ class GameProvider extends ChangeNotifier {
     final level = currentLevel;
     if (level == null) return false;
 
-    return _userAnswer.toLowerCase() == level.answer.toLowerCase();
+    final isCorrect = _userAnswer.toLowerCase() == level.answer.toLowerCase();
+
+    if (isCorrect) {
+      _audioService.playCorrect();
+    } else {
+      _audioService.playWrong();
+    }
+
+    return isCorrect;
   }
 
   void nextLevel() {
